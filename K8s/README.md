@@ -24,7 +24,7 @@ The quotas and usage are shown in the Instana Kubernetes dashboards.
 Optinally you can also run the `autoscale.sh` script to configure automatic scaling of the deployments. You will need to edit the script if you did not deploy to the `robot-shop` namespace. Varying the load on the application will cause Kubernetes to scale up/down the various deployments.
 
 ## Istio
-
+Test 1
 Stan's Robot Shop will run on Kubernetes with Istio service mesh. Configure Istio ingress.
 
 ```shell
