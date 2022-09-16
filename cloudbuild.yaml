@@ -4,7 +4,7 @@ steps:
    id: 'build-image-rs-cart'
    waitFor: ['-']
 options:
-   logging: GCS_ONLY
+   logging: CLOUD_LOGGING_ONLY
 images:
 - 'gcr.io/$PROJECT_ID/rs-cart:latest'
 - 'gcr.io/$PROJECT_ID/rs-cart:$REPO_NAME'
