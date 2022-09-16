@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/rs-cart:latest', '-']
+  id: 'build-image-rs-cart'
+  waitFor: ['-']
+images:
+- 'gcr.io/$PROJECT_ID/rs-cart:latest'
