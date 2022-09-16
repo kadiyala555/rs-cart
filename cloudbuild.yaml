@@ -1,7 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/rs-cart:latest', '-']
+  args: ['build', '-t', 'gcr.io/thedevproj/github.com/kadiyala555/rs-cart:latest', '-t', 'gcr.io/thedevproj/github.com/kadiyala555/rs-cart:$COMMIT_SHA' '-t', 'gcr.io/thedevproj/github.com/kadiyala555/rs-cart:$BUILD_ID' '-t', '-']
   id: 'build-image-rs-cart'
   waitFor: ['-']
 images:
-- 'gcr.io/$PROJECT_ID/rs-cart:latest'
+- 'gcr.io/thedevproj/github.com/kadiyala555/rs-cart:latest'
+- 'gcr.io/thedevproj/github.com/kadiyala555/rs-cart:$COMMIT_SHA'
+- 'gcr.io/thedevproj/github.com/kadiyala555/rs-cart:$BUILD_ID'
