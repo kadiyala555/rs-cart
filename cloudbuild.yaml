@@ -3,6 +3,8 @@ steps:
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/rs-cart:latest', '-t', 'gcr.io/$PROJECT_ID/rs-cart:$COMMIT_SHA' '-t', 'gcr.io/$PROJECT_ID/rs-cart:$BUILD_ID' '-t', '-']
   id: 'build-image-rs-cart'
   waitFor: ['-']
+options:
+  logging: NONE
 images:
 - 'gcr.io/$PROJECT_ID/rs-cart:latest'
 - 'gcr.io/$PROJECT_ID/rs-cart:$COMMIT_SHA'
